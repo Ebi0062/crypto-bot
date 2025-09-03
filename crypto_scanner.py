@@ -27,5 +27,9 @@ for coin in coins:
         message += f"• {coin['name']} ({coin['symbol'].upper()})\n"
         message += f"  💵 قیمت: ${coin['current_price']}\n"
         message += f"  📉 تغییر ۲۴h: {coin['price_change_percentage_24h']}%\n\n"
-
+print("Message content:", message)
 send_telegram_message(message)
+if len(message) > 50:
+    print("Message sent successfully!")
+else:
+    print("No coins found or message too short")
