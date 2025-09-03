@@ -23,7 +23,7 @@ coins = response.json()
 
 message = "🔍 میم‌کوین‌های امیدوارکننده:\n\n"
 for coin in coins:
-    if coin['price_change_percentage_24h'] < -8 and coin['market_cap'] < 100000000:
+    if coin['price_change_percentage_24h'] < 100:
         message += f"• {coin['name']} ({coin['symbol'].upper()})\n"
         message += f"  💵 قیمت: ${coin['current_price']}\n"
         message += f"  📉 تغییر ۲۴h: {coin['price_change_percentage_24h']}%\n\n"
